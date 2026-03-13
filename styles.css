@@ -2,8 +2,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --outline: 1px red dotted;
 }
 body{
     background: linear-gradient(to top, #121212, #1c1c1c) ;
     height: 100dvh;
+    color: #EAEAEA;
+}
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #3a5f3a9b, rgba(0, 0, 0, 0));
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+#links{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#links a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #EAEAEA;
+    display: block;
+    transition: 0.3s;
+}
+#links a:hover, #links a:focus{
+    color: #eaeaea9c;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #ffffff;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    text-decoration: none;
+  }
+}
+.closebtn{
+    color: #ffffff;
+}
+.noshow{
+    display:none !important;
+}
+header {
+    position: relative;
+}
+span {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+.inner, .inner:after, .inner:before {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    content: '';
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: transform, opacity;
+}
+.inner:before {
+    top: 10px;
+}
+.inner:after {
+    top: 20px;
+}
+header{
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.174))
+    height: 3.5rem;
 }

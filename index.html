@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Fungus Influens</title>
 </head>
+
 <body>
     <header>
-        Fungus influens<nav>
-        <a href="index.html">Home</a>
-        <div id="links">
-            <a href="about.html">About</a>
-            <a href="char.html">Characters</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="time.html">Timeline</a>
+        Fungus influens<nav id="myNav" class="overlay">
 
-        </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div id="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="char.html">Characters</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="time.html">Timeline</a>
+            </div>
+
         </nav>
+        <span  id="spanien" onclick="openNav()">
+            <div class="inner"></div>
+        </span>
     </header>
-   
+
     <li>
         <p></p>
         <p></p>
@@ -27,4 +35,5 @@
     </li>
 </body>
 <script src="script.js"></script>
+
 </html>
