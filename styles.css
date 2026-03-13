@@ -90,6 +90,6 @@ span {
     top: 20px;
 }
 header{
-    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.174))
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.174));
     height: 3.5rem;
 }
