@@ -82,22 +82,22 @@
 <section id="gallery"><h2>Gallery</h2>
 <div class="cards-gallery">
     <div class="card">
-        <button id="myBtn"><img src="img/img1.jpg" alt="Joel"></button>
+        <button><img src="img/img1.jpg" alt="Joel"></button>
     </div>
     <div class="card">
-        <button id="myBtn"><img src="img/img2.jpg" alt="Ellie"></button>
+        <button><img src="img/img2.jpg" alt="Ellie"></button>
     </div>
     <div class="card">
-        <button id="myBtn"><img src="img/img3.jpg" alt="Tess"></button>
+        <button><img src="img/img3.jpg" alt="Tess"></button>
     </div>
     <div class="card">
-        <button id="myBtn"><img src="img/img4.jpg" alt="Tommy"></button>
+        <button><img src="img/img4.jpg" alt="Tommy"></button>
     </div>
     <div class="card">
-        <button id="myBtn"><img src="img/img5.jpg" alt="Bill"></button>
+        <button><img src="img/img5.jpg" alt="Bill"></button>
     </div>
     <div class="card">
-        <button id="myBtn"><img src="img/marlene.jpg" alt="Marlene"></button>
+        <button><img src="img/marlene.jpg" alt="Marlene"></button>
     </div>
 </div>
 <div class="modal1">
