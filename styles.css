@@ -1,95 +1,159 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --outline: 1px red dotted;
+
+* { margin:0; 
+    padding:0; 
+    box-sizing:border-box;
+    --outline: 1px dotted red;
 }
-body{
-    background: linear-gradient(to top, #121212, #1c1c1c) ;
-    height: 100dvh;
-    color: #EAEAEA;
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,1)), url('background.jpg');
+  background-size: cover;
+  color:#EAEAEA;
 }
-.overlay{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    right: 0;
-    top: 0;
-    background: linear-gradient(to left, #3a5f3a9b, rgba(0, 0, 0, 0));
-    overflow-x: hidden;
-    transition: 0.5s;
+
+h1, h2 { font-family:'Cinzel', serif; }
+
+h2{
+    font-size: 3rem;
+    text-decoration:underline
 }
-#links{
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
 }
-#links a{
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #EAEAEA;
-    display: block;
-    transition: 0.3s;
+
+#tagline { color:#C25B2A; font-size:2rem; }
+
+#menuIcon {
+  font-size:4rem;
+  position:fixed;
+  top:20px;
+  right:20px;
+  cursor:pointer;
+  z-index:1100;
 }
-#links a:hover, #links a:focus{
-    color: #eaeaea9c;
+
+.overlay {
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:1000;
+  right:0;
+  top:0;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(5px);
+  transition:0.5s;
 }
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #ffffff;
+
+#links {
+  position:relative;
+  top:25%;
+  text-align:center;
 }
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    text-decoration: none;
+
+#links a {
+  display:block;
+  color:#EAEAEA;
+  font-size:2rem;
+  padding:10px;
+  font-family:'Cinzel', serif;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+section {
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+  display: grid;
+  place-content: center;
+}
+
+
+@media (max-width: 768px) {
+  #tagline { font-size:1.5rem; }
+
+  .cards {
+    grid-template-columns:1fr;
+  }
+  .cards-gallery{
+    grid-template-columns:1fr;
   }
 }
-.closebtn{
-    color: #ffffff;
+
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns:repeat(2, 1fr);
+  }
 }
-.noshow{
-    display:none !important;
+.container{
+    margin-top: 30dvh;
 }
-header {
-    position: relative;
+a.closebtn{
+    color: white;
+    font-size: 3rem;
 }
-span {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    display: inline-block;
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
+section img{
+    width: 110dvh;
+    height:60dvh;
+    border-radius: 3rem;
 }
-.inner, .inner:after, .inner:before {
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    border-radius: 5px;
-    content: '';
-    transition-timing-function: ease;
-    transition-duration: .2s;
-    transition-property: transform, opacity;
+section p{
+    font-size: 2rem;
+    padding: 1rem;
 }
-.inner:before {
-    top: 10px;
+.card img{
+    width: 100%;
+    height: 30dvh;
+    width: 25dvh;
+    border-radius: 1rem;
 }
-.inner:after {
-    top: 20px;
+.card p{
+    font-size: 1.25rem;
+    padding: 0.5rem;
 }
-header{
-    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.174));
-    height: 3.5rem;
+.cards-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.cards-gallery .card img{
+    padding: 10px;
+    width: 300px;
+    height: 250px;
+}
+.modal1 .modal2 .modal3 .modal4 .modal5{
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.closebtn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
